@@ -7,7 +7,7 @@ def read_dictionary(filename):
     with open(filename, 'r') as file:
         for line in file:
             if ':' in line:
-                key, value = line.strip().split(':')
+                key, value = line.strip().split(':') 
                 key = key.strip()
                 values = []
                 for v in value.split(','):
@@ -35,8 +35,8 @@ def write_dictionary(filename, f):
             file.write(f"{key}: {', '.join(values)}\n")
 
 def do_assignment8():
-    input_filename = 'test.txt'
-    output_filename = 'inverted.txt'
+    input_filename = input_file
+    output_filename = input(f"What would you like the new file to be named?: ")
 
     original_dict = read_dictionary(input_filename)
     inverted_dict = invert_dictionary(original_dict)
@@ -44,4 +44,5 @@ def do_assignment8():
     print('\nInverted dictionary written to', output_filename)
 
 do_assignment8()
+
 
