@@ -1,2 +1,14 @@
 # Read-and-write-files-in-python3
 Here is the Python program used to read a dictionary from a file, invert the dictionary, and write to a different file
+
+The read_dictionary function in this code:
+This function has a parameter where a file is to be passed (expected to be the dictionary file) as an argument. I then create an empty dictionary, open the passed file and iterate through each line and separate the line by the colon in the text, assigning the key and value variables to the split. This effectively assigns the key to the first part before the ‘:’ and the values being the text after. Additionally to clean up the line, I use the strip function to prevent any unwanted spaces or newlines in the dictionary. We also strip the key and create a list which will hold the value we desire for the dictionary key. If there are multiple values, the next line will split the values at the comma, strip each text and add it to the list. Afterwards, we add to the dictionary the key and assign the value. This effectively loops through the whole text file, converting it to a real dictionary in python. We return this dictionary to be used by the next function.
+
+The invert_dictionary function in this code:
+This function takes the previously made dictionary argument, loops through each item, and effectively inverts the dictionary. To do this, we create an empty dictionary, iterate through each item in the dictionary passed, then loop through each value in the original dictionary. If the value is not a key in the inverted dictionary it is made into one. After all the values of the original dictionary are turned into keys in the inverted dictionary, we go back to our original loop and append the original dictionary keys to their appropriate values. We then return this inverted dictionary to be written to a file by the next function.
+
+The write_dictionary function in this code:
+This function takes the previously made inverted dictionary and a filename as arguments, opening a new write file using the filename passed. Since this file didn’t exist before, it is created, and we loop through the inverted dictionary items, writing each of them into the file line by line. 
+
+Lastly, the do_assignment8 function in this code:
+This function was created to streamline the work for me, everything happens from this function. It defines the file names we want to read as well as write to, passing them as arguments to the appropriate functions. Original_dict variable passes the filename as an argument and holds the returned dictionary from read_dictionary. The inverted_dict passes the original dictionary as an argument and holds the returned inverted dictionary from inverted_dictionary. And lastly we call the write_dictionary function, passing the inverted dictionary as well as the desired filename, writing the inverted dictionary to a new file, completing our task.
