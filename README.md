@@ -1,5 +1,5 @@
 # Read-and-write-files-in-python3
-Here is the Python program used to read a dictionary from a file, invert the dictionary, and write to a different file
+Here is a Python program I created to read a dictionary from a file, invert the dictionary, and write the inverted dictionary to a new file
 
 The read_dictionary function in this code:
 This function has a parameter where a file is to be passed (expected to be the dictionary file) as an argument. I then create an empty dictionary, open the passed file and iterate through each line and separate the line by the colon in the text, assigning the key and value variables to the split. This effectively assigns the key to the first part before the ‘:’ and the values being the text after. Additionally to clean up the line, I use the strip function to prevent any unwanted spaces or newlines in the dictionary. We also strip the key and create a list which will hold the value we desire for the dictionary key. If there are multiple values, the next line will split the values at the comma, strip each text and add it to the list. Afterwards, we add to the dictionary the key and assign the value. This effectively loops through the whole text file, converting it to a real dictionary in python. We return this dictionary to be used by the next function.
