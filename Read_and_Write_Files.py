@@ -30,7 +30,6 @@ def invert_dictionary(d):
 
 
 def write_dictionary(filename, f):
-    
     with open(filename, 'w') as file:
         for key, values in f.items():
             file.write(f"{key}: {', '.join(values)}\n")
@@ -43,3 +42,4 @@ def do_assignment8():
     inverted_dict = invert_dictionary(original_dict)
     write_dictionary(output_filename, inverted_dict)
     print('\nInverted dictionary written to', output_filename)
+
