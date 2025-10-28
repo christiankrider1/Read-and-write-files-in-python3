@@ -1,5 +1,5 @@
 
-input_file = 'test.txt'
+input_file = input(f"Enter name of text file where the dictionary is located (ex-test.txt): ")
 
 
 def read_dictionary(filename):
@@ -42,4 +42,6 @@ def do_assignment8():
     inverted_dict = invert_dictionary(original_dict)
     write_dictionary(output_filename, inverted_dict)
     print('\nInverted dictionary written to', output_filename)
+
+do_assignment8()
 
